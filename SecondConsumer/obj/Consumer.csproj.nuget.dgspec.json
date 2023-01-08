@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DOTNET\\RabbitMQ\\Producer\\Producer.csproj": {}
+    "D:\\DOTNET\\RabbitMQ\\secondConsumer\\Consumer.csproj": {}
   },
   "projects": {
-    "D:\\DOTNET\\RabbitMQ\\Producer\\Producer.csproj": {
+    "D:\\DOTNET\\RabbitMQ\\secondConsumer\\Consumer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DOTNET\\RabbitMQ\\Producer\\Producer.csproj",
-        "projectName": "Producer",
-        "projectPath": "D:\\DOTNET\\RabbitMQ\\Producer\\Producer.csproj",
+        "projectUniqueName": "D:\\DOTNET\\RabbitMQ\\secondConsumer\\Consumer.csproj",
+        "projectName": "Consumer",
+        "projectPath": "D:\\DOTNET\\RabbitMQ\\secondConsumer\\Consumer.csproj",
         "packagesPath": "C:\\Users\\arraf\\.nuget\\packages\\",
-        "outputPath": "D:\\DOTNET\\RabbitMQ\\Producer\\obj\\",
+        "outputPath": "D:\\DOTNET\\RabbitMQ\\secondConsumer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arraf\\AppData\\Roaming\\NuGet\\NuGet.Config",

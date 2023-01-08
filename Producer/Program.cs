@@ -7,32 +7,15 @@ var factory = new ConnectionFactory { HostName = "localhost" };
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
-channel.QueueDeclare(
-    queue: "letterbox",
-    durable: false,
-    exclusive: false,
-    autoDelete: false,
-    arguments: null
-);
+channel.ExchangeDeclare(exchange: "pubsub", type: ExchangeType.Fanout);
 
-var random = new Random();
+var message = "Broadcasting a message";
 
-var messageId = 1;
+var body = Encoding.UTF8.GetBytes(message);
 
-while (messageId == 10)
-{
+channel.BasicPublish(exchange: "pubsub", "", null, body);
+Console.WriteLine($"Send Message: {message}");
 
-    var publishingTime = random.Next(1, 4);
-
-    var message = $"Sending MessageId: {messageId}";
-    var encodedMessage = Encoding.UTF8.GetBytes(message);
-    channel.BasicPublish("", "letterbox", null, encodedMessage);
-    Console.WriteLine($"Publshed Message: {message}");
-
-    Task.Delay(TimeSpan.FromSeconds(publishingTime)).Wait();
-
-    messageId++;
-}
 
 
 
